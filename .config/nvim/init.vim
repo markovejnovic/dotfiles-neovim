@@ -13,7 +13,7 @@ Plugin 'ClaudiaJ/lightline-molokai.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'justinmk/vim-sneak'
 Plugin 'preservim/nerdtree'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'neoclide/coc.nvim'
 Plugin 'mhinz/vim-signify'
 "Plugin 'ap/vim-css-color'
 "Plugin 'cpiger/NeoDebug'
