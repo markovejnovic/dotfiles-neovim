@@ -1,36 +1,35 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin(stdpath('data') . '/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tomasr/molokai'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-Plugin 'itchyny/lightline.vim'
-Plugin 'ClaudiaJ/lightline-molokai.vim'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'justinmk/vim-sneak'
-Plugin 'preservim/nerdtree'
-Plugin 'neoclide/coc.nvim'
-Plugin 'mhinz/vim-signify'
-"Plugin 'ap/vim-css-color'
-"Plugin 'cpiger/NeoDebug'
-Plugin 'markovejnovic/vim-dssl2'
-"Plugin 'tmhedberg/matchit'
-"Plugin 'raingo/vim-matlab'
-"Plugin 'Yggdroot/indentLine'
-"Plugin 'wlangstroth/vim-racket'
-"Plugin 'tpope/vim-scriptease'
-Plugin 'lervag/vimtex'
-"Plugin 'mkotha/conflict3'
-"Plugin 'shirk/vim-gas'
-Plugin 'zacharied/lc3.vim'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
+Plug 'VundleVim/Vundle.vim'
+Plug 'tomasr/molokai'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+Plug 'ClaudiaJ/lightline-molokai.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'justinmk/vim-sneak'
+Plug 'preservim/nerdtree'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'mhinz/vim-signify'
+"Plug 'ap/vim-css-color'
+"Plug 'cpiger/NeoDebug'
+Plug 'markovejnovic/vim-dssl2'
+"Plug 'tmhedberg/matchit'
+"Plug 'raingo/vim-matlab'
+"Plug 'Yggdroot/indentLine'
+"Plug 'wlangstroth/vim-racket'
+"Plug 'tpope/vim-scriptease'
+Plug 'lervag/vimtex'
+"Plug 'mkotha/conflict3'
+"Plug 'shirk/vim-gas'
+Plug 'zacharied/lc3.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " Mouse settings
