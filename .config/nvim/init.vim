@@ -3,7 +3,6 @@ filetype off
 
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'VundleVim/Vundle.vim'
 Plug 'tomasr/molokai'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
@@ -13,7 +12,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'justinmk/vim-sneak'
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 "Plug 'ap/vim-css-color'
 "Plug 'cpiger/NeoDebug'
 Plug 'markovejnovic/vim-dssl2'
@@ -28,17 +27,22 @@ Plug 'lervag/vimtex'
 Plug 'zacharied/lc3.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'dense-analysis/ale'
+Plug 'tpope/vim-surround'
+Plug 'Yggdroot/indentLine'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 filetype plugin indent on
 
 " Mouse settings
-set mouse=c
+set mouse=a
 set clipboard+=unnamedplus
 
 " Columns, numbers and tabs
 set cc=80
-set textwidth=80
+set textwidth=79
 set tabstop=4 shiftwidth=4 expandtab
 set number relativenumber
 
@@ -221,3 +225,18 @@ let g:lightline = {
       \ },
       \ 'component_function': { 'cocstatus': 'coc#status' },
       \ }
+
+" [tpope/vim-surround] Bindings
+let g:surround_no_mappings = 1
+nmap d2  <Plug>Dsurround
+nmap c2  <Plug>Csurround
+nmap c3  <Plug>CSurround
+nmap y2  <Plug>Ysurround
+nmap y3  <Plug>YSurround
+nmap y22 <Plug>Yssurround
+nmap y32 <Plug>YSsurround
+nmap y33 <Plug>YSsurround
+xmap 3   <Plug>VSurround
+xmap g2  <Plug>VgSurround
+
+" [SirVer/ultisnips]
