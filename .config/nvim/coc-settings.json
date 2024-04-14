@@ -5,5 +5,7 @@
       "command": "nimlsp",
       "filetypes": ["nim"]
     }
-  }
+  },
+  "python.linting.ruffEnabled": true,
+  "python.linting.mypyEnabled": true
 }

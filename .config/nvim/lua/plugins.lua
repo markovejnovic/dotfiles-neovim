@@ -13,7 +13,6 @@ require('packer').startup(function()
 
   -- Git integration
   use 'lewis6991/gitsigns.nvim'
-  use 'ojroques/nvim-bufbar'
   use 'tpope/vim-fugitive'
 
   -- Navigation
@@ -45,4 +44,6 @@ require('packer').startup(function()
       require"octo".setup()
     end
   }
+
+  use { 'nvim-treesitter/nvim-treesitter', run = 'TSUpdate' }
 end)

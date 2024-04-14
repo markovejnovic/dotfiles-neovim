@@ -9,8 +9,6 @@ require('gitsigns').setup {
 
 require('colorizer').setup({ 'css' })
 
-require('bufbar').setup {}
-
 local colors = {
   red                    = '#df0000',
   green                  = '#008700',

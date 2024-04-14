@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/home/marko/.local/share/nvim/site/pack/packer/start/nim.vim",
     url = "https://github.com/zah/nim.vim"
   },
-  ["nvim-bufbar"] = {
-    loaded = true,
-    path = "/home/marko/.local/share/nvim/site/pack/packer/start/nvim-bufbar",
-    url = "https://github.com/ojroques/nvim-bufbar"
-  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/marko/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
@@ -123,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/marko/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/marko/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
