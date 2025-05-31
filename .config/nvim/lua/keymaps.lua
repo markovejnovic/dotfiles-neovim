@@ -1,7 +1,11 @@
--- Keyboard Mappings
+vim.keymap.set('n', '<C-f>', ':FzfLua files<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<M-f>', ':FzfLua oldfiles<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-b>', ':FzfLua buffers<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-g>', ':FzfLua grep<CR>', { noremap = true, silent = true })
+
+--- Keyboard Mappings
 vim.keymap.set('n', ',nn', ':NvimTreeToggle<CR>')
-vim.keymap.set('n', '<C-F>', ':Files<CR>')
-vim.keymap.set('n', '<C-G>', ':Ag<CR>')
+vim.keymap.set('n', '<C-p>', ':let @+ = expand("%")<CR>')
 
 -- Easier window navigation
 vim.keymap.set('n', '<C-H>', '<C-W>h')
