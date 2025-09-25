@@ -105,14 +105,7 @@ require('packer').startup(function()
   use {
     'ibhagwan/fzf-lua',
     config = function()
-      require'fzf-lua'.setup({
-        winopts = {
-          height = 0.8,
-          width = 0.4,
-          border = 'rounded',
-          fullscreen = false,
-        },
-      })
+      require'fzf-lua'.setup()
     end
   }
 
@@ -130,16 +123,14 @@ require('packer').startup(function()
   use { 'neoclide/coc.nvim', branch = 'release' }
   use 'puremourning/vimspector'
   use 'lervag/vimtex'
-  use 'github/copilot.vim'
+  use { 'github/copilot.vim' }
   -- Git integration
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
       require('gitsigns').setup({
-	current_line_blame = true,
-	numhl = true,
-	linehl = true,
-	word_diff = true,
+        current_line_blame = true,
+        numhl = true,
       })
     end
   }
@@ -153,6 +144,7 @@ require('packer').startup(function()
         auto_install = true,
         ensure_installed = {
           'c', 'lua', 'vim', 'vimdoc', 'query', 'cpp', 'python', 'elixir',
+          'cmake',
         },
         highlight = {
           enable = true,
@@ -164,5 +156,13 @@ require('packer').startup(function()
       }
     end
   }
-  use { 'nvim-treesitter/nvim-treesitter-context' }
+
+  use {
+    'nvim-treesitter/nvim-treesitter-context',
+    requires = 'nvim-treesitter/nvim-treesitter'
+  }
+
+  use { 'moll/vim-bbye' }
+
+  use 'Olical/conjure'
 end)

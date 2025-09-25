@@ -1,7 +1,14 @@
 vim.keymap.set('n', '<C-f>', ':FzfLua files<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<M-f>', ':FzfLua oldfiles<CR>', { noremap = true, silent = true })
+vim.api.nvim_create_user_command('FzfLuaFilesHidden', function()
+  require('fzf-lua').files({ fd_opts = "-u", silent = true })
+end, {})
+vim.keymap.set('n', '<M-f>', ':FzfLuaFilesHidden<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-b>', ':FzfLua buffers<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-g>', ':FzfLua grep<CR>', { noremap = true, silent = true })
+vim.api.nvim_create_user_command('FzfLuaGrepHidden', function()
+  require('fzf-lua').grep({ rg_opts = "-u", silent = true })
+end, {})
+vim.keymap.set('n', '<M-g>', ':FzfLuaGrepHidden<CR>', { noremap = true, silent = true })
 
 --- Keyboard Mappings
 vim.keymap.set('n', ',nn', ':NvimTreeToggle<CR>')
